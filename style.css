@@ -1,0 +1,758 @@
+/* Mengimpor font dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* Reset CSS */
+/* Pengaturan dasar untuk semua elemen */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Variabel Custom */
+/* Variabel warna dan ukuran font */
+:root {
+  --bg-color: #fff;
+  --text-color: #0f0c27;
+  --gallery-color: #2b2c2f;
+  --button-color: #2b2c2f;
+
+  --big-font: 51.2px;
+  --medium-font: 28px;
+  --p-font: 16px;
+}
+
+/* Overflow HTML */
+/* Pengaturan overflow untuk elemen HTML */
+html {
+  overflow: visible;
+}
+
+/* Styling untuk setiap bagian */
+/* Styling untuk elemen section */
+section {
+  padding: 110px 12%;
+}
+
+/* Active Body */
+/* Styling untuk body saat aktif */
+body.active {
+  --text-color: #fff;
+  --bg-color: #2b2c2f;
+  --gallery-color: #ffffff75;
+  --button-color: #fff;
+}
+
+/* Styling untuk body */
+/* Styling umum untuk body */
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Seleksi teks */
+/* Pengaturan warna pada teks yang dipilih */
+*::selection {
+  color: var(--bg-color);
+  background: var(--text-color);
+}
+
+/* Scrollbar
+/* Pengaturan scrollbar */
+html::-webkit-scrollbar {
+  width: 10px;
+}
+*/ html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #2b2c2f;
+  border-radius: 80px;
+}
+
+/* Animasi */
+/* Animasi latar belakang */
+@keyframes back {
+  100% {
+    background-position: 2000px 0px;
+  }
+}
+
+/* Hide */
+/* Pengaturan untuk menyembunyikan elemen */
+.hide {
+  opacity: 0;
+  transition: 1s;
+  pointer-events: none;
+}
+
+/* Header */
+/* Styling untuk header */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-color);
+  padding: 9px;
+  transition: 0.2s;
+}
+
+/* Shadow Header */
+/* Shadow untuk header */
+header.shadow {
+  box-shadow: 0 0 5px #2b2c2f;
+}
+
+/* Logo */
+/* Styling untuk logo */
+.logo {
+  display: none;
+  font-size: 17.6px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+/* Navbar */
+/* Styling untuk navbar */
+.navbar {
+  display: flex;
+}
+
+.navbar a {
+  font-size: 18px;
+  padding: 10px 20px;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  background: #2b2c2f;
+  color: #fff;
+}
+
+/* Red Mode */
+/* Styling untuk mode merah */
+#redmode {
+  font-size: 22px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+/* Home */
+/* Styling untuk halaman utama */
+.home {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 1fr;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Home Image */
+/* Styling untuk gambar halaman utama */
+.home-img {
+  order: 3;
+}
+
+.home-img img {
+  width: 55%;
+  border-radius: 50px;
+}
+
+/* Home Text */
+/* Styling untuk teks halaman utama */
+.home-text .hello {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.home-text h1 {
+  font-size: 25px;
+}
+
+.home-text p {
+  font-size: var(--p-font);
+  font-weight: 400;
+  margin: 10px 0 16px;
+}
+
+.home-text .btn {
+  display: inline-block;
+  background: #2b2c2f;
+  color: #fff;
+  padding: 11px 11px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.btn:hover {
+  background: #2b2c2f;
+}
+
+/* Heading */
+/* Styling untuk heading */
+.heading {
+  text-align: center;
+}
+
+.heading h2 {
+  font-size: var(--medium-font);
+}
+
+.heading span {
+  font-size: 16px;
+}
+
+/* Social Media */
+/* Styling untuk media sosial */
+.social-media {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.social-media button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.social-media button {
+  border: none;
+  outline: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s;
+  font-size: 19px;
+  margin-right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media button:hover {
+  transform: scale(1.1);
+}
+
+.social-media button.instagram {
+  background: #ffffff;
+}
+
+.social-media button.github {
+  background: #ffffff;
+}
+
+.social-media button.facebook {
+  background: #ffffff;
+}
+
+/* About */
+/* Styling untuk bagian about */
+.about .heading {
+  margin-top: -10px;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0px;
+  margin-top: 50px;
+}
+
+.about-img img {
+  width: 50%;
+  border-radius: 50px;
+  margin-left: 225px;
+}
+
+.about-text p {
+  font-size: var(--p-font);
+  font-weight: 400;
+  text-align: justify;
+}
+
+/* Styling untuk bagian blog */
+.blog .heading {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.blog-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  gap: 24px;
+  margin-top: 50px;
+  padding: 0 20px;
+}
+
+.blog-box {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  border-radius: 8px;
+  border-bottom: 2px solid #2b2c2f;
+  box-shadow: 0 2px 7px rgb(14 55 54 / 15%);
+  background: #fff;
+  transition: transform 0.3s;
+}
+
+.blog-box:hover {
+  transform: scale(1.05);
+}
+
+.blog-box h1 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0.7rem 0 0.4rem;
+  color: #333;
+}
+
+.blog-box p {
+  color: #2b2c2f;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.blog-box a {
+  color: #007bff;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.blog-box a:hover {
+  text-decoration: underline;
+}
+
+h4 {
+  color: white;
+}
+
+/* Gallery */
+/* Styling untuk galeri */
+.gallery {
+  margin-top: 25px;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 3fr));
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+  gap: 16px;
+  margin-top: 50px;
+}
+
+.gallery-container .box .box-img {
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-container .box .box-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.gallery-container .box .content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: -100%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background: rgb(28, 40, 68, 0.8);
+}
+
+.gallery-container .box .content .bi {
+  color: #fff;
+  font-size: 21px;
+  border-radius: 5px;
+  padding: 0px 5px;
+  align-items: center;
+  background: #fff;
+  color: #3c7a6d;
+}
+
+.gallery-container .box .content h3 {
+  color: #fff;
+  font-size: 17.6px;
+  font-weight: 600;
+  margin: 5px;
+  align-items: center;
+}
+
+.gallery-container .box:hover .content {
+  top: 0;
+  transition: 0.4s;
+}
+
+/* Contact */
+/* Styling untuk kontak */
+.contact {
+  margin-top: 40px;
+  padding: 110px;
+}
+
+.contact__info {
+  margin-bottom: var(--mb-3);
+}
+
+.contact__subtitle {
+  margin-top: 30px;
+  font-size: var(--h3-font-size);
+  color: var(--first-color-darken);
+  margin-bottom: var(--mb-1);
+  text-align: center;
+}
+
+.contact__text {
+  display: block;
+  color: var(--first-color-darken);
+  text-align: center;
+}
+
+@media (min-width: 1800px) and (max-height: 1080px) {
+  section {
+    padding: 150px 20%;
+  }
+
+  .about-img {
+    width: 80%;
+    margin-left: 70px;
+  }
+
+  header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-color);
+    padding: 12px;
+    transition: 0.2s;
+  }
+
+  header.shadow {
+    box-shadow: 0 0 5px #2b2c2f;
+  }
+
+  .navbar {
+    display: flex;
+  }
+
+  .navbar a {
+    font-size: 18px;
+    padding: 15px 20px;
+    color: var(--text-color);
+    font-weight: 500;
+  }
+
+  #redmode {
+    font-size: 24px;
+    margin-left: 5px;
+    cursor: pointer;
+  }
+
+  .blog .heading {
+    margin-top: 60px;
+  }
+
+  .gallery {
+    margin-top: 50px;
+  }
+
+  .gallery-container {
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+  }
+
+  textarea {
+    resize: none;
+    height: 200px;
+  }
+}
+
+@media (max-width: 1366px) {
+  section {
+    padding: 100px 12%;
+  }
+
+  .about .heading {
+    margin-top: -30px;
+  }
+
+  .blog .heading {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 991px) {
+  header {
+    padding: 18px 4%;
+  }
+
+  section {
+    padding: 85px 4%;
+  }
+
+  .about-img img {
+    width: 80%;
+    margin-left: 150px;
+  }
+
+  .btn {
+    font-size: 16px;
+  }
+
+  .gallery-container {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --big-font: 2.4rem;
+    --medium-font: 1.5rem;
+  }
+
+  section {
+    padding: 125px 3%;
+  }
+
+  @keyframes back {
+    100% {
+      background-position: 1900px 0;
+    }
+  }
+
+  header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg-color);
+    padding: 9px 7%;
+    transition: 0.2s;
+  }
+
+  .logo {
+    display: block;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: -500px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-color);
+    box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+    transition: 0.2s ease;
+    text-align: center;
+  }
+
+  .navbar.active {
+    top: 100%;
+  }
+
+  .navbar a {
+    padding: 15px;
+    display: block;
+    background: var(--bg-color);
+  }
+
+  #redmode {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+  }
+
+  .home {
+    grid-template-columns: 0fr 3fr;
+  }
+
+  .home-text {
+    grid-column: 1/3;
+    padding-left: 1rem;
+    padding-bottom: 3rem;
+    margin-top: -75px;
+  }
+
+  .home-img {
+    order: initial;
+    padding-top: 20px;
+    width: 50%;
+  }
+
+  .btn {
+    font-size: 16px;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+    padding: 0px 4%;
+  }
+
+  .about-text {
+    margin-top: 25px;
+  }
+
+  .about-img {
+    display: flex;
+    justify-content: center;
+    margin-left: 150px;
+    width: 35%;
+  }
+
+  .gallery-container {
+    gap: 14px;
+  }
+
+  .gallery-container .box {
+    height: 200px;
+  }
+
+  .contact {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 0px;
+  }
+}
+
+@media (max-width: 480px) and (max-height: 900px) {
+  @keyframes back {
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+
+  .counter {
+    font-size: 4em;
+  }
+
+  #redmode {
+    right: 26px;
+  }
+
+  .home-text {
+    grid-column: 1/3;
+    padding-left: 1rem;
+    padding-bottom: 3rem;
+    margin-top: -20px;
+  }
+
+  .home-img {
+    order: initial;
+    margin-top: -20px;
+    width: 90%;
+  }
+
+  .about-img {
+    display: flex;
+    justify-content: center;
+    margin-left: -10px;
+    width: 60%;
+  }
+
+  h2 {
+    margin-top: -70px;
+  }
+
+  .gallery-container {
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(1, auto);
+    gap: 14px;
+  }
+
+  .gallery-container .box {
+    height: 200px;
+  }
+}
+
+@media (max-width: 340px) {
+  section {
+    padding: 130px 3%;
+  }
+
+  .home-text .hello {
+    font-size: 22px;
+  }
+
+  .home-text h1 {
+    font-size: 24px;
+  }
+
+  .home-text p {
+    font-size: 14px;
+  }
+
+  .home-img {
+    order: initial;
+    margin-top: -90px;
+    width: 75%;
+  }
+
+  .home-text .btn {
+    margin-top: -10px;
+    padding: 10px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+  }
+
+  .about {
+    margin-top: -30px;
+  }
+
+  .about-img {
+    margin-left: -20px;
+  }
+
+  .about-container {
+    margin-top: 25px;
+  }
+
+  .about-img {
+    width: 50%;
+    margin-left: -3px;
+  }
+
+  .blog .heading {
+    margin-top: -80px;
+  }
+
+  .contact {
+    padding: 0px 5px 0px 5px;
+  }
+}
